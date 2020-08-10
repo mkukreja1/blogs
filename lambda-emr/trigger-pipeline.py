@@ -53,7 +53,7 @@ def lambda_handler(event, context):
                 'Args': [
                     "spark-submit", "--deploy-mode", "cluster",
                     's3://YOUR_BUCKET/spark/renewable-curation.py',
-					'--JOB_DATE', YOUR_JOB_DATE
+					'--JOB_DATE', JOB_DATE
                     '--S3_BUCKET', YOUR_BUCKET
                     '--REGION', YOUR_REGION
 
