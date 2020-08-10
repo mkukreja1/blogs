@@ -4,6 +4,7 @@ import boto3
 import json
 import logging
 import base64
+from urllib.parse import unquote_plus
 
 def lambda_handler(event, context):
     for record in event['Records']:
@@ -53,8 +54,8 @@ def lambda_handler(event, context):
                 'Args': [
                     "spark-submit", "--deploy-mode", "cluster",
                     's3://YOUR_BUCKET/spark/hydropower-processing.py',
-					'--JOB_DATE', JOB_DATE
-                    '--S3_BUCKET', YOUR_BUCKET
+					'--JOB_DATE', JOB_DATE,
+                    '--S3_BUCKET', 'YOUR_BUCKET',
                     '--REGION', YOUR_REGION
 
                 ]
