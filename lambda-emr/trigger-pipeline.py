@@ -42,7 +42,7 @@ def lambda_handler(event, context):
         BootstrapActions=[{
             'Name': 'Install',
             'ScriptBootstrapAction': {
-                'Path': 's3://aws-analytics-course/job/energy/emr.sh'
+                'Path': 's3://BUCKET/bootstrap/emr.sh'
             }
         }],
         Steps=[{
@@ -52,7 +52,7 @@ def lambda_handler(event, context):
                 'Jar': 'command-runner.jar',
                 'Args': [
                     "spark-submit", "--deploy-mode", "cluster",
-                    's3://aws-analytics-course/job/energy/renewable-curation.py',
+                    's3://BUCKET/spark/renewable-curation.py',
 					'--JOB_DATE', JOB_DATE
                 ]
             }
