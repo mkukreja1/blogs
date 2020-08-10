@@ -9,7 +9,7 @@
            "FilterRules": [
                         {
                             "Name": "Prefix",
-                            "Value": "raw/files/renewable/hydropower-consumption/"
+                            "Value": "data/"
                         }
                     ]
 
