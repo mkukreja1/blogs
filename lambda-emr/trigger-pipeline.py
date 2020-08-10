@@ -52,7 +52,7 @@ def lambda_handler(event, context):
                 'Jar': 'command-runner.jar',
                 'Args': [
                     "spark-submit", "--deploy-mode", "cluster",
-                    's3://YOUR_BUCKET/spark/renewable-curation.py',
+                    's3://YOUR_BUCKET/spark/hydropower-processing.py',
 					'--JOB_DATE', JOB_DATE
                     '--S3_BUCKET', YOUR_BUCKET
                     '--REGION', YOUR_REGION
