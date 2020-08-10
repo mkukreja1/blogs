@@ -2,7 +2,7 @@
 "LambdaFunctionConfigurations": [
     {
       "Id": "Trigger Hydropower Pipeline",
-      "LambdaFunctionArn": "arn-of-aws-lambda-function",
+      "LambdaFunctionArn": "YOUR_LAMBDA_ARN",
       "Events": [ "s3:ObjectCreated:Put" ],
       "Filter": {
         "Key": {
