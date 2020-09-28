@@ -1,3 +1,4 @@
+orderNumber,orderDate,requiredDate,shippedDate,status,comments,customerNumber
 "10100"|"2003-01-06"|"2003-01-13"|"2003-01-10"|"Shipped"|\N|"363"
 "10101"|"2003-01-09"|"2003-01-18"|"2003-01-11"|"Shipped"|"Check on availability."|"128"
 "10102"|"2003-01-10"|"2003-01-18"|"2003-01-14"|"Shipped"|\N|"181"
