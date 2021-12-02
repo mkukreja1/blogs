@@ -19,7 +19,7 @@ async def run():
  async with producer:
  # Create a batch.
   event_data_batch = await producer.create_batch()
-  terminalvoltage = round(random.uniform(43.5, 46.5), 2)
+  terminalvoltage = round(random.uniform(39, 54.6), 2)
   #print(terminalvoltage)
   batterypack_timestamp = calendar.timegm(datetime.utcnow().timetuple())
   batterypacks = ['Scooter1','Scooter2', 'Scooter3', 'Scooter4', 'Scooter5']
