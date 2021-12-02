@@ -12,7 +12,7 @@ async def run():
  parser.add_argument('--EVENTHUB_NAME', dest='EVENTHUB_NAME')
  parser.add_argument('--EVENTHUB_CONN_STR', dest='EVENTHUB_CONN_STR')
  args = parser.parse_args()
- print(args)
+ #print(args)
  EVENTHUB_CONN_STR=args.EVENTHUB_CONN_STR
  EVENTHUB_NAME=args.EVENTHUB_NAME
  producer = EventHubProducerClient.from_connection_string(conn_str=EVENTHUB_CONN_STR, eventhub_name=EVENTHUB_NAME)
@@ -20,7 +20,7 @@ async def run():
  # Create a batch.
   event_data_batch = await producer.create_batch()
   terminalvoltage = round(random.uniform(93.5, 96.5), 2)
-  print(terminalvoltage)
+  #print(terminalvoltage)
   batterypack_timestamp = calendar.timegm(datetime.utcnow().timetuple())
   batterypacks = ['Scooter4']
   batterypack = random.choice(batterypacks)
