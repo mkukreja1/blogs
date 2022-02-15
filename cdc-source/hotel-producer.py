@@ -34,4 +34,4 @@ while True:
     print(json_three)
     put_to_stream(json_three)
 
-    time.sleep(3600)
+    time.sleep(300)
