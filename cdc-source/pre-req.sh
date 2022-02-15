@@ -21,6 +21,7 @@ do
       break
 	fi
 done
+mysql -uadmin -padmin123 -h $RDS_ENDPOINT -e "CREATE DATABASE cdc"
 echo "All done. The RDS instance has been sucessfully created. Type MySQL Endpoint: $RDS_ENDPOINT, Username: admin, Password: admin123 Please take note of these details since you will need to use them in the Databricks notebook."
 stty echo
 
