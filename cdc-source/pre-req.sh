@@ -22,6 +22,7 @@ do
 	fi
 done
 mysql -uadmin -padmin123 -h $RDS_ENDPOINT -e "CREATE DATABASE cdc"
-mysql -uadmin -padmin123 -h $RDS_ENDPOINT -e "CREATE VIEW hotel_prices AS SELECT city, hotel, price FROM (SELECT DISTINCT city,hotel,price,timestamp, RANK() OVER (PARTITION BY city,hotel ORDER BY timestamp DESC) price_rank FROM hotelcdcprices ) a WHERE price_rank=1"
+#mysql -uadmin -padmin123 -h $RDS_ENDPOINT -e "CREATE TABLE cdc.hotelcdcprices ADD ("
+#mysql -uadmin -padmin123 -h $RDS_ENDPOINT -e "CREATE VIEW cdc.hotel_prices AS SELECT city, hotel, price FROM (SELECT DISTINCT city,hotel,price,timestamp, RANK() OVER (PARTITION BY city,hotel ORDER BY timestamp DESC) price_rank FROM cdc.hotelcdcprices ) a WHERE price_rank=1"
 echo "All done. The RDS instance has been sucessfully created. Type MySQL Endpoint: $RDS_ENDPOINT, Username: admin, Password: admin123 Please take note of these details since you will need to use them in the Databricks notebook."
 stty echo
